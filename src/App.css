@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body,
+html {
+	margin: 0;
+	height: 100%;
+	padding: 0;
+	overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3 {
+	margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+	width: 775px;
+	margin: 0 auto;
+	padding: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-container {
+	margin-bottom: 20px;
+	text-align: end;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-switch {
+	padding: 0;
+	font-size: 20px;
+	color: gray;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-switch:hover {
+	color: rgb(54, 53, 53);
+}
+
+.cards-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.cards-list__item {
+	width: 225px;
+	height: 225px;
+	padding: 10px;
+	text-align: center;
+	background-color: #f5f5f5;
+}
+
+.cards-list__item--name {
+	margin-bottom: 7px;
+	text-transform: uppercase;
+}
+
+.cards-list__item--color {
+	font-size: 12px;
+	color: gray;
+}
+
+.cards-list__item--img {
+	width: 150px;
+	height: 150px;
+
+}
+
+.cards-list__item--price {
+	margin-right: 50px;
+	color: red;
+}
+
+.cards-list__item--button {
+	padding: 5px 10px;
+	font-size: 14px;
+	color: red;
+	text-transform: uppercase;
+	border: 1px solid red;
+	border-radius: 30px;
 }
