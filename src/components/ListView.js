@@ -1,10 +1,10 @@
-import ShopCard from "./ShopCard";
+import ShopItem from "./ShopItem";
 
-function CardsView({ products }) {
+function ListView({ products }) {
 	return (
-		<div className="cards-view">
+		<div className="list-view">
 			{products.map(item =>
-				<ShopCard
+				<ShopItem
 				name={item.name}
 				color={item.color}
 				img={item.img}
@@ -15,4 +15,4 @@ function CardsView({ products }) {
 	)
 }
 
-export default CardsView;
+export default ListView;
