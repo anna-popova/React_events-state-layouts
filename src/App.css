@@ -39,8 +39,7 @@ h3 {
 }
 
 .cards-view {
-	display: none;
-	/* display: grid; */
+	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
 }
