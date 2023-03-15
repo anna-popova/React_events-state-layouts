@@ -1,12 +1,18 @@
-//Реализуйте компонент Store, который управляет состоянием приложения, хранит список товаров в атрибуте products.
-
 import { useState } from 'react';
 import CardsView from './CardsView';
 import ListView from './ListView';
 import IconSwitch from './IconSwitch';
 
 function Store() {
-	//const icons = ["view_list", "view_module"];
+	const [icon, setIcon] = useState("view_list");
+
+	function onSwitch(icon) {
+		if (icon === "view_list") {
+			setIcon("view_module");
+		} else {
+			setIcon("view_list");
+		}
+	}
 	
 	const products = [{
 		name: "Nike Metcon 2",
@@ -43,8 +49,8 @@ function Store() {
 	 return (
 		<>
 		<IconSwitch 
-			icon={"view_list"} 
-			onSwitch={() => console.log("change state here")}
+			icon={icon} 
+			onSwitch={onSwitch}
 		/>
 		<CardsView products={products} />
 		<ListView products={products} />
