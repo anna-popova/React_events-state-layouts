@@ -52,8 +52,7 @@ function Store() {
 			icon={icon} 
 			onSwitch={onSwitch}
 		/>
-		<CardsView products={products} />
-		<ListView products={products} />
+		{ icon === "view_list" ? <ListView products={products} /> : <CardsView products={products} /> }
 		</>
 	 )
 }
